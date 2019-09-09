@@ -1,0 +1,938 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower|Kanit" rel="stylesheet">
+<link rel="stylesheet" href="bootstrap.css">
+<link rel="stylesheet" href="fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css">
+<script src="jquery-3.2.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$('.div2_ul>li').mouseover(function(){
+		      $(this).find('.sub').stop().slideDown()		  
+		})
+		
+		$('.div2_ul>.li1').mouseout(function(){
+		      $(this).find('.sub').stop().slideUp()	  
+		})
+
+		$(".acco_li").click(function(){
+		$(this).next().slideDown()
+		$(this).css({color:'#FFB7D4'})
+		$(".acco_li").not(this).css({'color':'black'})
+		$('.acco_next').not($(this).next()).slideUp()
+		})
+		
+		$('.phone_menu').click(function(){
+			$('.accordion').stop().slideToggle()
+		})
+			
+		
+	})
+</script>
+
+<title>Untitled Document</title>
+<style>
+	/*font-family: 'Indie Flower', cursive;
+     font-family: 'Kanit', sans-serif;*/
+	*{margin:0; padding:0; list-style:none; position:relative;}
+	html,body{width:100%; overflow-x:hidden;}
+	/*--nav start--*/
+	.menu{width:100%; }
+	.menu_div1{display:flex; align-items:center; 
+		justify-content:space-between;padding-top:50px;padding-right:70px;padding-left:70px}
+	.menubox1{display:flex; align-items:center;
+		justify-content:center;}
+	.div2_ul{display:flex; align-items:center; 
+		justify-content:center;z-index:100; }
+	.div2_ul>li{margin-left:50px;font-family: 'Kanit', sans-serif; font-size:18px;}
+	.menubox2{font-family: 'Kanit', sans-serif; font-size:18px;}
+	.fas{color:#FFB7D4; padding-left:20px}
+	
+	.sub{position:absolute; width:240px; border:px solid red; top:70px; display:none;  }
+	.sub>li{padding:10px;background-color:white;}
+	.sub>li:last-child{border-radius:0 0 10px 10px;}
+	.no_fas{display:none; transition:0.3s; font-size:10px;}
+	.in_fas{padding-right:10px;font-size:10px;}
+	.sub>li:hover .no_fas{display:inline-block;}
+
+	
+	/*---------------*/
+	.menu_div2{}
+	
+	.meun_div2_2{display:flex; align-items:center; justify-content:center; padding-top:50px;padding-bottom:50px;padding-left:100px;padding-right:100px; ;}
+	.phone_menu{position:absolute; left:30px; font-size:20px; cursor:pointer;}
+	
+	.accordion{position:absolute; top:130px;width:100%;font-family: 'Kanit', sans-serif; overflow:hidden; display:none;}
+	.accordion_ul{border:px solid red;z-index:100}
+	.accordion_ul>li{padding-right:30px;padding-left:30px; display:flex; justify-content:space-between;padding-top:10px;padding-bottom:10px; border-bottom:1px dashed #858585;background-color:white;}
+	.acco_next{left:0px; display:none;}
+	.acco_next>li{border-bottom:1px dashed #858585;background-color:white;}
+	.acco_next>li:hover .no_fas{display:inline-block;}
+	
+	.phone_menu:hover{color:#B5FFBD}
+	
+
+	
+	@media screen and (max-width:1000px){
+		.menu_div1 {display: none;}}
+		
+	@media screen and (min-width:1001px){
+		.menu_div2 {display: none;}	}
+		
+		
+/*	.main1 p>*:not(.fas){display: none;}*/
+
+	.article1{z-index:10; margin-top:30px;}
+	.art_img1{border:px solid red; display:flex; align-items:center; justify-content:center;}
+	
+	.art_cover{position:absolute; border:px solid red; z-index:200;}
+	.art_cover1{top:0;}
+	.art_cover2{bottom:0;}
+	
+	.art_ele{position:absolute;; top:60px;left:8%; border:px solid red; z-index:200; width:660px; height:700px;}
+	.ele_img{position:absolute;}
+	.ele_img1{top:10px;;left:320px}
+	.ele_img2{top:0px;left:0px}
+	.ele_img3{top:90px;left:100px;}
+	.ele_img4{top:300px;left:100px;;}
+	.ele_img5{top:400px;left:100px;;}
+	.ele_img6{top:520px;left:100px;}
+	.art_text{font-family: 'Indie Flower', cursive; font-weight:bold; font-size:30px; color:white; width:500px; border:px solid red;position:absolute; top:530px;left:100px;}
+	.art_but{width:175px; height:70px; position:absolute; border:3px solid white; border-radius:10px; top:620px;left:100px; color:white; display:flex; align-items:center; justify-content:center;font-family: 'Indie Flower', cursive; font-weight:bold; font-size:20px;}
+
+	@media screen and (max-width:1000px){
+		.article1{z-index:10; margin-top:0px;}
+		.art_ele{position:absolute;; top:calc(50% - 200px);left:calc(50% - 150px); border:px solid red; z-index:200; width:300px; height:450px;}
+	.ele_img{position:absolute;}
+	.ele_img1{top:20px;;left:140px; width:30px;}
+	.ele_img2{top:20px;left:0px;width:290px;}
+	.ele_img3{top:60px;left:50px;width:200px;}
+	.ele_img4{top:150px;left:50px;width:200px;;}
+	.ele_img5{top:200px;left:50px;width:200px;;}
+	.ele_img6{top:270px;left:50px;width:200px;}
+	.art_text{font-family: 'Indie Flower', cursive; font-weight:bold; font-size:20px; color:white; width:250px; border:px solid red;position:absolute; top:280px;left:40px;}
+		
+	.art_but{width:175px; height:70px; position:absolute; border:3px solid white; border-radius:10px; top:350px;left:70px; color:white; display:flex; align-items:center; justify-content:center;font-family: 'Indie Flower', cursive; font-weight:bold; font-size:20px;}
+	}
+	/*---------article1 end----------------*/
+	
+	.article2{width:100%; display:flex; align-items:center; justify-content:center; flex-direction:column; margin-top:100px; margin-bottom:50px;}
+	
+	.article2_top{display:flex; align-items:center; justify-content:center; flex-direction:column; margin-bottom:50px;}
+	.article2_top>h1{font-family: 'Kanit', sans-serif; font-size:50px}
+	.article2_top>span{font-family: 'Indie Flower', cursive;font-size:20px;}
+
+	.article2_bottom{width:100%; background-image:url(img/h1-background-img-1.png); background-size:cover; background-position:center; background-repeat:no-repeat; border:1px solid red;}
+	
+	
+	
+	/*----------*/
+	@media screen and (max-width:1000px){
+	    .article2_top>h1{font-family: 'Kanit', sans-serif; font-size:29px}
+		.article2_top>span{font-family: 'Indie Flower', cursive;font-size:18px;}
+	}
+
+/*------------*/
+		/*3번째 페이지*/
+
+
+
+
+
+/*img랑 밑에 text*/
+	.section3{background-image:url(img/h1-background-img-1.png);  background-size:cover;}
+.item>.img_box{position: relative;}
+.img_box>img{width: 100%;margin: auto;}
+.item>p{text-align: center;;cursor: pointer;}
+.item>p:hover{color: #8c6239; font-weight: 500;}
+.item>h4{text-align: center;padding-bottom: 10px;color: #534741;padding-top: 20px;font-family: 'Kanit', sans-serif; font-size:30px; transition:0.5s;}
+.item>h3{text-align: center;color: #8c6239;padding-bottom: 30px;}
+
+	.item>h4:hover{color:#33FF96}
+	
+/*star별별별별별*/
+.item .img_box .star{width: 130px; height: 30px; position: absolute;left: calc(50% - 65px);bottom:-30px;overflow: hidden;}
+.item .img_box .star>span{position: absolute;top: 0; left: 0;overflow: hidden;}
+.star i{width: 22px;font-size: 14px;line-height: 30px;}
+.star .empty_star i{color: #FFB7D4;}
+.star .full_star i{color: #FFB7D4;}
+
+.star .empty_star{}
+.star .full_star{width: 50px;}
+
+.item:nth-child(1) .full_star{width: 80px;}
+.item:nth-child(2) .full_star{width: 90px;}
+.item:nth-child(3) .full_star{width: 120px;}
+.item:nth-child(4) .full_star{width: 110px;}
+.item:nth-child(5) .full_star{width: 110px;}
+.item:nth-child(6) .full_star{width: 90px;}
+.item:nth-child(7) .full_star{width: 75px;}
+.item:nth-child(8) .full_star{width: 110px;}
+
+/*이미지 hover 했을때*/
+	
+.img_box::before{content: "";width: 0;height: 0;background-color: rgba(0,0,0,0.5);display: block;transition: 0.5s;position: absolute; z-index:100}
+.img_box::after{content: "";width: 0;height: 0;background-color: rgba(0,0,0,0.5);display: block;transition: 0.5s;position: absolute;}	
+
+.img_box::before{top: 0; left: 0; border:px solid red;}
+.img_box::after{bottom: 0; right: 0; border:px solid red;}
+	
+.img_box:hover.img_box::before , .img_box:hover.img_box::after{width: 100%;height: 100%;opacity: 0.5;}
+/*img 안에 아이콘들*/
+/*-----sec4---------*/
+	.sec4_div{position:absolute; top:250px;right:200px;}
+	.sec4_div>h4{font-size:60px; color:white;font-family: 'Kanit', sans-serif;}
+	.sec4_div>h3{font-family: 'Indie Flower', cursive;color:white}
+	.sec4_inputbox>input{width:300px; padding:0px; border:3px dashed white;border-radius:10px; background:rgba(0,0,0,0);height:50px; color:white;}
+	.sec4_but{width:150px; height:50px; border:2px solid white; margin-left:30px; border-radius:10px; display:flex; justify-content:center; align-items:center; color:white;cursor:pointer;font-family: 'Kanit', sans-serif;}
+	.sec4_inputbox{display:flex; justify-content:flex-start; margin-top:30px;}
+	.sec4_google{display:flex; justify-content:flex-start;  margin-top:50px;}
+	.sec4_google>img{margin-right:20px; cursor:pointer;}
+	
+	
+	@media screen and (max-width:1000px){
+		
+		.section4>img{display:none;}
+		.section4{background-color:#FFB7D4;width:100%;height:600px;}
+		.sec4_div{position:absolute; top:calc(50% - 180px);left:calc(50% - 150px);width:300px;border:px solid red}
+	.sec4_div>h4{font-size:40px; color:white;font-family: 'Kanit', sans-serif;}
+	.sec4_div>h3{font-family: 'Indie Flower', cursive;color:white}
+	.sec4_inputbox>input{width:200px; padding:0px; border:3px dashed white;border-radius:10px; background:rgba(0,0,0,0);height:50px; color:white;margin-bottom:20px;}
+		
+	.sec4_but{width:150px; height:50px; border:2px solid white; margin:0px; border-radius:10px; display:flex; justify-content:center; ; align-items:center; color:white;cursor:pointer;font-family: 'Kanit', sans-serif;}
+	.sec4_inputbox{display:flex; justify-content:flex-start; margin-top:30px;flex-direction:column}
+	.sec4_google{display:flex; justify-content:flex-start;  margin-top:50px;}
+	.sec4_google>img{margin-right:20px; cursor:pointer;width:130px;}
+	}
+/*-----sec4---------*/
+	
+/*------sec5--------*/
+	.sec5_textbox{display:flex; align-items:center; justify-content:center; flex-direction:column; margin-top:100px; margin-bottom:100px;}
+	.sec5_textbox>img{position:absolute;}
+	.sec5_textbox>h4{text-align:center;font-family: 'Kanit', sans-serif;font-size:25px;}
+	.sec5_textbox>h3{text-align:center;font-family: 'Indie Flower', cursive;font-size:30px;}
+	.sec5_textbox>h2{text-align:center;font-family: 'Kanit', sans-serif;font-size:20px;}
+	.sec5_textbox>h1{text-align:center;font-family: 'Kanit', sans-serif;font-size:15px;}
+/*------sec5--------*/
+
+/*---------sec6-----------*/
+	.section6{width:95%; background-color:#00C8A6;margin:auto}
+	.sec6_img1{position:absolute;top:0;}
+	.sec6_img2{position:absolute;bottom:0;}
+	
+	.sec6_main{display:flex; align-items:center; justify-content:center; flex-direction:column;padding-top:100px;padding-bottom:100px;}
+	.sec6_inbox{display:flex; align-items:center; justify-content:center;}
+	.sec6_box{display:flex; align-items:center; justify-content:center; padding:20px;}
+	.sec6_text{display:flex; align-items:center; justify-content:center; flex-direction:column; padding-left:10px;}
+	.sec6_box_in{display:flex; align-items:center; justify-content:space-between; width:320px;font-family: 'Kanit', sans-serif; color:white}
+	.sec6_box_in>div{border-bottom:1px dashed white; width:150px;}
+	.sec6_box_p{display:flex; align-items:center; justify-content:flex-start;width:300px;font-family: 'Indie Flower', cursive; font-size:16px; color:white;}
+	
+	.sec6_right_img{position:absolute; border:1px solid red;top:0;right:0;}
+	.sec6_right_img>img{position:absolute;}
+	.sec6_right_img>img:nth-child(1){top:150px; right:0px;}
+	.sec6_right_img>img:nth-child(2){top:300px; right:100px;}
+	.sec6_right_img>img:nth-child(3){top:400px; right:200px;}
+	.sec6_right_img>img:nth-child(4){top:450px; right:150px;}
+	.sec6_right_img>img:nth-child(5){top:550px; right:150px;}
+	.sec6_right_img>img:nth-child(6){top:650px; right:50px;}
+	.sec6_right_img>img:nth-child(7){top:650px; right:250px;}
+	.sec6_right_img>img:nth-child(8){top:750px; right:150px;transform:rotate(70deg)}
+	
+	.sec6_left_img{position:absolute; border:1px solid red;top:0;left:0;}
+	.sec6_left_img>img{position:absolute;}
+	.sec6_left_img>img:nth-child(1){top:0px; left:0px;}
+	.sec6_left_img>img:nth-child(2){top:400px; left:100px;}
+	.sec6_left_img>img:nth-child(3){top:500px; left:200px;transform:rotate(70deg)}
+	.sec6_left_img>img:nth-child(4){top:400px; left:-150px; transform:rotate(-10deg)}
+	.sec6_left_img>img:nth-child(5){top:300px; left:-100px;transform:rotate(-30deg)}
+	
+	
+	@media screen and (max-width:1000px){
+		.sec6_inbox{display:flex; align-items:center; justify-content:center; flex-direction:column}
+		.sec6_box_in{display:flex; align-items:center; justify-content:space-between; width:150px;font-family: 'Kanit', sans-serif; color:white}
+		.sec6_box_in>div{border-bottom:1px dashed white; width:30px;}
+		.sec6_box_p{display:flex; align-items:center; justify-content:flex-start;width:150px;font-family: 'Indie Flower', cursive; font-size:16px; color:white;}
+		
+		.sec6_right_img{position:absolute; border:1px solid red;top:0;right:0;}
+	.sec6_right_img>img{position:absolute;}
+	.sec6_right_img>img:nth-child(1){top:270px; right:0px;width:100px}
+	.sec6_right_img>img:nth-child(2){top:420px; right:50px;width:20px;}
+	.sec6_right_img>img:nth-child(3){top:500px; right:30px;width:20px;}
+	.sec6_right_img>img:nth-child(4){top:570px; right:40px;width:20px;}
+	.sec6_right_img>img:nth-child(5){top:650px; right:40px;width:20px;}
+	.sec6_right_img>img:nth-child(6){top:730px; right:50px;width:20px;}
+	.sec6_right_img>img:nth-child(7){top:1250px; right:50px;}
+	.sec6_right_img>img:nth-child(8){top:1050px; right:50px;transform:rotate(70deg);}
+	
+	.sec6_left_img{position:absolute; border:1px solid red;top:0;left:0;}
+	.sec6_left_img>img{position:absolute;}
+	.sec6_left_img>img:nth-child(1){top:240px; left:0px; width:120px}
+	.sec6_left_img>img:nth-child(2){top:700px; left:100px;}
+	.sec6_left_img>img:nth-child(3){top:900px; left:200px;transform:rotate(70deg)}
+	.sec6_left_img>img:nth-child(4){top:1350px; left:-100px; transform:rotate(-10deg);width:300px;}
+	.sec6_left_img>img:nth-child(5){top:1250px; left:-100px;transform:rotate(-30deg);width:300px;}
+		
+	}
+/*---------sec6-----------*/	
+	
+	/*--------sec7----------*/
+	.article7{margin-top:100px!important; }
+	.sec7_inbox{width:100%; overflow:hidden;}
+	.sec7_inbox>img{width:100%;}
+	 .sec7_text>h4{font-family: 'Kanit', sans-serif; font-size:30px;}
+	.sec7_text>p{font-family: 'Indie Flower', cursive;}
+	.span_Box>span{margin-right:10px;}
+	.span_Box>span:last-child{margin-left:10px;}
+	.section7{padding-bottom:100px;}
+	/*--------sec7----------*/
+	
+	/*--------sec8---------------*/
+	.section8{width:100%; display:flex; align-items:center; justify-content:center; flex:auto;}
+	.section8 img{width:100%;}
+	/*--------sec8---------------*/
+	
+	/*-------sec9--------*/
+	.section9{background:black; padding-top:100px; padding-bottom:100px;}
+	.sec9_item{display:flex;align-items:; justify-content:flex-start; flex-direction:column;}
+	.sec9_item>h3{font-size:20px; color:#DCDCDC;font-family: 'Kanit', sans-serif;}
+	.sec9_item i{padding:0;margin-top:10px;margin-bottom:10px;}
+	.sec9_item>h4{font-size:14px; color:#DCDCDC;font-family: 'Kanit', sans-serif;}
+	.sec9_box_in{display:flex; justify-content:space-between;color:#DCDCDC;font-family: 'Kanit', sans-serif;}
+	.sec9_box_in>div{border-bottom:1px dashed #DCDCDC; width:110px; height:20px;}
+	.sec9_right{display:flex; flex-direction:column;margin-top:30px; border:px solid red;}
+	.sec9_right>div{display:flex;}
+	.sec9_right>div>img{width:33.5%; height:30%;}
+	.sec9_left_img{width:80%;}
+	@media screen and (max-width:1000px){
+		.sec9_item{display:flex;align-items:center; justify-content:center; flex-direction:column;}
+		.sec9_right>div{display:flex;align-items:center;}
+		.sec9_right{display:flex; align-items:center;flex-direction:column;margin-top:30px; border:px solid red}
+	}
+	/*-------sec9---------*/
+	/*----sec10*/
+	.section10{padding-top:30px; padding-bottom:30px; background-color:black; border-top:1px solid #DCDCDC;}
+	.sec10_text{display:flex;align-items:center; justify-content:center; border:px solid red;}
+	.sec10_text>h3{font-size:16px;color:#DCDCDC;}
+	.sec10_icon{display:flex;align-items:center; justify-content:center; border:px solid red; color:#DCDCDC;}
+	.sec10_icon>div{margin-left:10px; margin-right:10px; font-size:20px; padding-top:10px;padding-bottom:10px;}
+	/*----sec10*/
+	/*--nav end--*/
+	</style>
+</head>
+
+<body>
+<nav class="tap1 menu">
+	<div class="menu_div1">
+		<div class="menubox1">
+			<div class="box1_div1">
+				<img src="img/side-area-img-2.png">
+			</div>
+			<div class="box1_div2">
+				<ul class="div2_ul">
+					<li class="li1">Home
+					<ul class="sub">
+						<li class="submenu"><i class="fas fa-circle in_fas"></i>Main Home</li>
+						<li class="submenu"><i class="fas fa-circle no_fas in_fas"></i>Juice Bar</li>
+						<li class="submenu"><i class="fas fa-circle no_fas in_fas"></i>Animated Slider</li>
+						<li class="submenu"><i class="fas fa-circle no_fas in_fas"></i>Vertical Showcase</li>
+						<li class="submenu"><i class="fas fa-circle no_fas in_fas"></i>Smoothie Home</li>
+						<li class="submenu"><i class="fas fa-circle no_fas in_fas"></i>Landing</li>
+					</ul>
+					</li>
+					<li class="li1">Menu</li>
+					<li class="li1">Pages
+					<ul class="sub">
+						<li class="submenu"><i class="fas fa-circle no_fas in_fas"></i>About Us</li>
+						<li class="submenu"><i class="fas fa-circle no_fas in_fas"></i>What We Do</li>
+						<li class="submenu"><i class="fas fa-circle no_fas in_fas"></i>Our Team</li>
+						<li class="submenu"><i class="fas fa-circle no_fas in_fas"></i>Contact Us</li>				
+					</ul></li>
+					<li class="li1">Gallery
+					<ul class="sub">
+						<li class="submenu"><i class="fas fa-circle no_fas in_fas"></i>2 Column</li>
+						<li class="submenu"><i class="fas fa-circle no_fas in_fas"></i>3 Column</li>
+						<li class="submenu"><i class="fas fa-circle no_fas in_fas"></i>4 Column</li>
+						<li class="submenu"><i class="fas fa-circle no_fas in_fas"></i>4 Column Wide</li>
+						<li class="submenu"><i class="fas fa-circle no_fas in_fas"></i>5 Column Wide</li>
+						<li class="submenu"><i class="fas fa-circle no_fas in_fas"></i>Smoothie Slider</li>
+					</ul>
+					</li>
+					<li class="li1">Blog
+					<ul class="sub">
+						<li class="submenu"><i class="fas fa-circle no_fas in_fas"></i>Blog Right Sidebar</li>
+						<li class="submenu"><i class="fas fa-circle no_fas in_fas"></i>Blog Left Sidebar</li>
+						<li class="submenu"><i class="fas fa-circle no_fas in_fas"></i>Blog Without Sidebar</li>
+						<li class="submenu"><i class="fas fa-circle no_fas in_fas"></i>Blog Single</li>	
+					</ul>
+					</li>
+					<li class="li1">Shop
+					<ul class="sub">
+						<li class="submenu"><i class="fas fa-circle no_fas in_fas"></i>Shop With Sidebar</li>
+						<li class="submenu"><i class="fas fa-circle no_fas in_fas"></i>Shop Single</li>
+						<li class="submenu"><i class="fas fa-circle no_fas in_fas"></i>Shop Layouts</li>
+						<li class="submenu"><i class="fas fa-circle no_fas in_fas"></i>Shop Pages</li>	
+					</ul>
+					</li>
+					<li class="li1">Elements
+					<ul class="sub">
+						<li class="submenu"><i class="fas fa-circle no_fas in_fas"></i>Classic</li>
+						<li class="submenu"><i class="fas fa-circle no_fas in_fas"></i>Infographic</li>
+						<li class="submenu"><i class="fas fa-circle no_fas in_fas"></i>Presentational</li>
+						<li class="submenu"><i class="fas fa-circle no_fas in_fas"></i>Typography</li>	
+					</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="menubox2">
+			<p>Cart items<i class="fas fa-shopping-basket"></i></p>
+		</div>
+	</div>
+	<div class="menu_div2">
+	<div class="meun_div2_2">
+	<div class="phone_menu">
+		<i class="eltdf-icon-font-awesome fa fa-th-large "></i>
+	</div>
+		<div class="phone_logo">
+			<img src="img/side-area-img-2.png">
+		</div>
+	</div>	
+		<div class="accordion">
+			<ul class="accordion_ul">
+				<li class="acco_li"><span>Home</span><i class="fas fa-angle-right"></i></li>
+				<ul class="acco_next">
+					<li><i class="fas fa-circle no_fas in_fas"></i>Main Home</li>
+					<li><i class="fas fa-circle no_fas in_fas"></i>Juice Bar</li>
+					<li><i class="fas fa-circle no_fas in_fas"></i>Animated Slider</li>
+					<li><i class="fas fa-circle no_fas in_fas"></i>Vertical Showcase</li>
+					<li><i class="fas fa-circle no_fas in_fas"></i>Smoothie Home</li>
+					<li><i class="fas fa-circle no_fas in_fas"></i>Landing</li>
+				</ul>
+				<li class="acco_li"><span>Menu</span><i class="fas fa-angle-right"></i></li>			
+				<li class="acco_li"><span>Pages</span><i class="fas fa-angle-right"></i></li>
+				<ul class="acco_next">
+					<li><i class="fas fa-circle no_fas in_fas"></i>About Us</li>
+					<li><i class="fas fa-circle no_fas in_fas"></i>What We Do</li>
+					<li><i class="fas fa-circle no_fas in_fas"></i>Our Team</li>
+					<li><i class="fas fa-circle no_fas in_fas"></i>Contact Us</li>
+				</ul>
+				<li class="acco_li"><span>Gallery</span><i class="fas fa-angle-right"></i></li>
+				<ul class="acco_next">
+					<li><i class="fas fa-circle no_fas in_fas"></i>2 Columns</li>
+					<li><i class="fas fa-circle no_fas in_fas"></i>3 Columns</li>
+					<li><i class="fas fa-circle no_fas in_fas"></i>4 Columns</li>
+					<li><i class="fas fa-circle no_fas in_fas"></i>4 Columns Wide</li>
+					<li><i class="fas fa-circle no_fas in_fas"></i>5 Columns Wide</li>
+					<li><i class="fas fa-circle no_fas in_fas"></i>Smoothie Slider</li>
+				</ul>
+				<li class="acco_li"><span>Blog</span><i class="fas fa-angle-right"></i></li>
+				<ul class="acco_next">
+					<li><i class="fas fa-circle no_fas in_fas"></i>Blog Right Sidebar</li>
+					<li><i class="fas fa-circle no_fas in_fas"></i>Blog Left Sidebar</li>
+					<li><i class="fas fa-circle no_fas in_fas"></i>Blog Without Sidebar</li>
+					<li><i class="fas fa-circle no_fas in_fas"></i>Blog Single</li>
+				</ul>
+				<li class="acco_li"><span>Shop</span><i class="fas fa-angle-right"></i></li>
+				<ul class="acco_next">
+					<li><i class="fas fa-circle no_fas in_fas"></i>Shop With Sidebar</li>
+					<li><i class="fas fa-circle no_fas in_fas"></i>Shop Single</li>
+					<li><i class="fas fa-circle no_fas in_fas"></i>Shop Layouts</li>
+					<li><i class="fas fa-circle no_fas in_fas"></i>Shop Pages</li>
+				</ul>
+				<li class="acco_li"><span>Elements</span><i class="fas fa-angle-right"></i></li>
+				<ul class="acco_next">
+					<li><i class="fas fa-circle no_fas in_fas"></i>Classic</li>
+					<li><i class="fas fa-circle no_fas in_fas"></i>Infographic</li>
+					<li><i class="fas fa-circle no_fas in_fas"></i>Presentational</li>
+					<li><i class="fas fa-circle no_fas in_fas"></i>Typography</li>
+				</ul>
+			</ul>
+		</div>
+		
+	</div>
+</nav>
+
+   
+
+<div class="article1">
+  <div class="art_img1">
+  <img src="img/h1-rev-background-img-1.jpg">
+  </div>
+  <div class="art_cover art_cover1"><img src="img/main-rev-image-5.png"></div>
+  <div class="art_cover art_cover2"><img src="img/main-rev-image-6.png"></div>
+  <div class="art_ele">
+  	<img src="img/h1-rev-img-6.png" class="ele_img ele_img1">
+  	<img src="img/h1-rev-img-1.png" class="ele_img ele_img2">
+  	<img src="img/h1-rev-img-2.png" class="ele_img ele_img3">
+  	<img src="img/h1-rev-img-3.png" class="ele_img ele_img4">
+  	<img src="img/h1-rev-img-4.png" class="ele_img ele_img5">
+  	<img src="img/h1-rev-img-5.png" class="ele_img ele_img6">
+  	<p class="art_text">We are awesome fruits and we care about favorit drink</p>
+  	<div class="art_but">buy now</div>
+  </div>	
+ </div>
+ 
+ <div class="article2_logo article2">
+ 	<div class="article2_top col-md-12 col-sm-12 col-xs-12">
+ 		<img src="img/h1-img-1.png">
+ 		<h1>Smoothies & Juices</h1>
+ 		<span>Smoothie demo designed for you</span>
+ 	</div>
+</div>
+
+<section class="section3">
+	<div class="shop_our">
+		<article class="container">
+			<div class="item col-md-3 col-sm-6 col-xs-12">
+				<div class="img_box">
+					
+					<img src="img/product-img-1-600x680.jpg">
+					<div class="star">
+						<span class="empty_star">
+							<i class="fa fa-star-o" aria-hidden="true"></i>
+							<i class="fa fa-star-o" aria-hidden="true"></i>
+							<i class="fa fa-star-o" aria-hidden="true"></i>
+							<i class="fa fa-star-o" aria-hidden="true"></i>
+							<i class="fa fa-star-o" aria-hidden="true"></i>
+						</span>
+						<span class="full_star">
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+						</span>
+					</div>
+				</div>
+				
+				<h4>Hippie Chick</h4>
+				<h3>€12.00</h3>
+			</div>
+			<div class="item col-md-3 col-sm-6 col-xs-12">
+				<div class="img_box">
+					
+					<img src="img/product-img-2-600x680.jpg">
+					<div class="star">
+						<span class="empty_star">
+							<i class="fa fa-star-o" aria-hidden="true"></i>
+							<i class="fa fa-star-o" aria-hidden="true"></i>
+							<i class="fa fa-star-o" aria-hidden="true"></i>
+							<i class="fa fa-star-o" aria-hidden="true"></i>
+							<i class="fa fa-star-o" aria-hidden="true"></i>
+						</span>
+						<span class="full_star">
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+						</span>
+					</div>
+				</div>
+				
+				<h4>Healthy Time</h4>
+				<h3>€8.00</h3>
+			</div>
+			<div class="item col-md-3 col-sm-6 col-xs-12">
+				<div class="img_box">
+					
+					<img src="img/product-img-3-600x680.jpg">
+					<div class="star">
+						<span class="empty_star">
+							<i class="fa fa-star-o" aria-hidden="true"></i>
+							<i class="fa fa-star-o" aria-hidden="true"></i>
+							<i class="fa fa-star-o" aria-hidden="true"></i>
+							<i class="fa fa-star-o" aria-hidden="true"></i>
+							<i class="fa fa-star-o" aria-hidden="true"></i>
+						</span>
+						<span class="full_star">
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+						</span>
+					</div>
+				</div>
+				
+				<h4>Smootheory</h4>
+				<h3>€25.00</h3>
+			</div>
+			<div class="item col-md-3 col-sm-6 col-xs-12">
+				<div class="img_box">
+					
+					<img src="img/product-img-4-600x680.jpg">
+					<div class="star">
+						<span class="empty_star">
+							<i class="fa fa-star-o" aria-hidden="true"></i>
+							<i class="fa fa-star-o" aria-hidden="true"></i>
+							<i class="fa fa-star-o" aria-hidden="true"></i>
+							<i class="fa fa-star-o" aria-hidden="true"></i>
+							<i class="fa fa-star-o" aria-hidden="true"></i>
+						</span>
+						<span class="full_star">
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+						</span>
+					</div>
+				</div>
+				
+				<h4>Smashed Bananas</h4>
+				<h3>€32.00</h3>
+			</div>
+			<div class="item col-md-3 col-sm-6 col-xs-12">
+				<div class="img_box">
+					
+					<img src="img/product-img-5-600x680.jpg">
+					<div class="star">
+						<span class="empty_star">
+							<i class="fa fa-star-o" aria-hidden="true"></i>
+							<i class="fa fa-star-o" aria-hidden="true"></i>
+							<i class="fa fa-star-o" aria-hidden="true"></i>
+							<i class="fa fa-star-o" aria-hidden="true"></i>
+							<i class="fa fa-star-o" aria-hidden="true"></i>
+						</span>
+						<span class="full_star">
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+						</span>
+					</div>
+				</div>
+				
+				<h4>Strawesome Smoothie</h4>
+				<h3>€14.00</h3>
+			</div>
+			<div class="item col-md-3 col-sm-6 col-xs-12">
+				<div class="img_box">
+					
+					<img src="img/product-img-6-600x680.jpg">
+					<div class="star">
+						<span class="empty_star">
+							<i class="fa fa-star-o" aria-hidden="true"></i>
+							<i class="fa fa-star-o" aria-hidden="true"></i>
+							<i class="fa fa-star-o" aria-hidden="true"></i>
+							<i class="fa fa-star-o" aria-hidden="true"></i>
+							<i class="fa fa-star-o" aria-hidden="true"></i>
+						</span>
+						<span class="full_star">
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+						</span>
+					</div>
+				</div>
+				
+				<h4>The Juice Box</h4>
+				<h3>€15.00</h3>
+			</div>
+			<div class="item col-md-3 col-sm-6 col-xs-12">
+				<div class="img_box">
+					
+					<img src="img/product-img-7-600x680.jpg">
+					<div class="star">
+						<span class="empty_star">
+							<i class="fa fa-star-o" aria-hidden="true"></i>
+							<i class="fa fa-star-o" aria-hidden="true"></i>
+							<i class="fa fa-star-o" aria-hidden="true"></i>
+							<i class="fa fa-star-o" aria-hidden="true"></i>
+							<i class="fa fa-star-o" aria-hidden="true"></i>
+						</span>
+						<span class="full_star">
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+						</span>
+					</div>
+				</div>
+				
+				<h4>Green Machine</h4>
+				<h3>€13.00</h3>
+			</div>
+			<div class="item col-md-3 col-sm-6 col-xs-12">
+				<div class="img_box">
+					
+					<img src="img/product-img-8-600x680.jpg">
+					<div class="star">
+						<span class="empty_star">
+							<i class="fa fa-star-o" aria-hidden="true"></i>
+							<i class="fa fa-star-o" aria-hidden="true"></i>
+							<i class="fa fa-star-o" aria-hidden="true"></i>
+							<i class="fa fa-star-o" aria-hidden="true"></i>
+							<i class="fa fa-star-o" aria-hidden="true"></i>
+						</span>
+						<span class="full_star">
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+						</span>
+					</div>
+				</div>
+				
+				<h4>Summer Time</h4>
+				<h3>€15.00</h3>
+			</div>
+		</article>
+	</div>
+</section>
+	
+<section class="section4">
+	<img src="img/h1-img-2b.jpg">
+	<div class="sec4_div">
+		<h4>Get Our Recipes Now!</h4>
+		<h3>Lorem ipsum dolor sit amet</h3>
+		<div class="sec4_inputbox">
+		<input placeholder="　Type your email">
+		<div class="sec4_but">subsscride</div>
+		</div>
+		<div class="sec4_google">
+			<img src="img/h1-img-3.png">
+			<img src="img/h1-img-4.png">
+		</div>
+	</div>
+	
+</section>
+ 
+ <div class="section5">
+ 	<div class="sec5_textbox">
+ 	<img src="img/h1-img-5.png">
+ 		<h4>They Say</h4>
+ 		<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Suspendisse non mi non nisl pulvinar aliquet.<br> Morbi aliquet tortor ac metus bibendum.</h3>
+ 		<h2>Lena Richardson</h2>
+ 		<h1>Smothie lover</h1>
+ 	</div>
+ </div>
+ 
+ <section class="section6">
+ 	<img src="img/main-rev-image-5.png" class="sec6_img1">
+ 	<img src="img/main-rev-image-6.png" class="sec6_img2">
+ 	<div class="sec6_main">
+ 		<img src="img/h1-img-6.png">
+ 		<div class="sec6_inbox">
+ 			<div>
+ 				<div class="sec6_box">
+ 					<img src="img/h1-pricing-img-1.png">
+ 					<div class="sec6_text">
+ 						<div class="sec6_box_in"><h4>Pink Smoothie</h4><div></div><h4>$11</h4>
+ 						</div>
+ 						<div class="sec6_box_p">
+ 						<p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+ 						</div>
+ 					</div>
+ 				</div>
+ 				<div class="sec6_box">
+ 					<img src="img/h1-pricing-img-2.png">
+ 					<div class="sec6_text">
+ 						<div class="sec6_box_in"><h4>Orange Smoothie</h4><div></div><h4>$13</h4>
+ 						</div>
+ 						<div class="sec6_box_p">
+ 						<p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+ 						</div>
+ 					</div>
+ 				</div>
+ 				<div class="sec6_box">
+ 					<img src="img/h1-pricing-img-3.png">
+ 					<div class="sec6_text">
+ 						<div class="sec6_box_in"><h4>White Smoothie</h4><div></div><h4>$12</h4>
+ 						</div>
+ 						<div class="sec6_box_p">
+ 						<p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+ 						</div>
+ 					</div>
+ 				</div>
+ 				<div class="sec6_box">
+ 					<img src="img/h1-pricing-img-4.png">
+ 					<div class="sec6_text">
+ 						<div class="sec6_box_in"><h4>Green Smoothie</h4><div></div><h4>$15</h4>
+ 						</div>
+ 						<div class="sec6_box_p">
+ 						<p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+ 						</div>
+ 					</div>
+ 				</div>
+ 			</div>
+ 			<div>
+ 				<div class="sec6_box">
+ 					<img src="img/h1-pricing-img-5.png">
+ 					<div class="sec6_text">
+ 						<div class="sec6_box_in"><h4>Kiwi Smoothie</h4><div></div><h4>$14</h4>
+ 						</div>
+ 						<div class="sec6_box_p">
+ 						<p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+ 						</div>
+ 					</div>
+ 				</div>
+ 				<div class="sec6_box">
+ 					<img src="img/h1-pricing-img-6.png">
+ 					<div class="sec6_text">
+ 						<div class="sec6_box_in"><h4>Red Smoothie</h4><div></div><h4>$17</h4>
+ 						</div>
+ 						<div class="sec6_box_p">
+ 						<p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+ 						</div>
+ 					</div>
+ 				</div>
+ 				<div class="sec6_box">
+ 					<img src="img/h1-pricing-img-7.png">
+ 					<div class="sec6_text">
+ 						<div class="sec6_box_in"><h4>Kale Smoothie</h4><div></div><h4>$15</h4>
+ 						</div>
+ 						<div class="sec6_box_p">
+ 						<p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+ 						</div>
+ 					</div>
+ 				</div>
+ 				<div class="sec6_box">
+ 					<img src="img/h1-pricing-img-8.png">
+ 					<div class="sec6_text">
+ 						<div class="sec6_box_in"><h4>Pink Smoothie</h4><div></div><h4>$11</h4>
+ 						</div>
+ 						<div class="sec6_box_p">
+ 						<p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+ 						</div>
+ 					</div>
+ 				</div>
+ 			</div>
+ 		</div>
+ 		
+ 	</div>
+ 	<div class="sec6_right_img">
+ 		<img src="img/home4-rev-image-2.png">
+ 		<img src="img/home4-rev-image-1.png">
+ 		<img src="img/home4-rev-image-3.png">
+ 		<img src="img/home4-rev-image-4.png">
+ 		<img src="img/home4-rev-image-5.png">
+ 		<img src="img/home4-rev-image-6.png">
+ 		<img src="img/main-rev-image-4.png">
+ 		<img src="img/main-rev-image-4.png">
+ 	</div>
+ 	<div class="sec6_left_img">
+ 		<img src="img/main-rev-image-3.png">
+ 		<img src="img/main-rev-image-4.png">
+ 		<img src="img/main-rev-image-4.png">
+ 		<img src="img/home-5-rev-img-2.png">
+ 		<img src="img/home-5-rev-img-1.png">
+ 	</div>
+ </section>
+  <div class="article2_logo article7">
+ 	<div class="article2_top col-md-12 col-sm-12 col-xs-12">
+ 		<img src="img/h1-img-1.png">
+ 		<h1>Smoothies & Juices</h1>
+ 		<span>Smoothie demo designed for you</span>
+ 	</div>
+ 	</div>
+ 	<section class="section7">
+ 		<div>
+ 			<article class="container">
+				<div class="sec7_item col-md-4 col-sm-12 col-xs-12">
+				<div class="sec7_inbox">
+					<img src="img/blog-post-img-1-550x550.jpg">
+				</div>
+					<div class="sec7_text">
+						<h4>Sweet Dreams</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sodales, erat non sodales egestas, magna augue gravida ligula, non finibus</p>
+						<div class="span_Box"><span>by admin</span>/<span>food</span></div>
+					</div>
+				</div>
+				<div class="sec7_item col-md-4 col-sm-12 col-xs-12">
+				<div class="sec7_inbox">
+					<img src="img/blog-post-img-2-550x550.jpg">
+				</div>
+					<div class="sec7_text">
+						<h4>Jump For Juice</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sodales, erat non sodales egestas, magna augue gravida ligula, non finibus</p>
+						<div class="span_Box"><span>by admin</span>/<span>food</span></div>
+					</div>
+				</div>
+				<div class="sec7_item col-md-4 col-sm-12 col-xs-12">
+				<div class="sec7_inbox">
+					<img src="img/blog-post-img-3-550x550.jpg">
+				</div>
+					<div class="sec7_text">
+						<h4>Fairytale Fruit</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sodales, erat non sodales egestas, magna augue gravida ligula, non finibus</p>
+						<div class="span_Box"><span>by admin</span>/<span>food</span></div>
+					</div>
+				</div>
+ 			</article>
+ 		</div>
+ 	</section>
+<div class="section8">
+	<div><img src="img/30592682_126193628238550_5060789342453104640_n.jpg"></div>
+	<div><img src="img/30603556_1931313450220221_3735080358635372544_n.jpg"></div>
+	<div><img src="img/30846821_166548997392147_8256991806705631232_n.jpg"></div>
+	<div><img src="img/31198489_230152800897454_1885019485031628800_n.jpg"></div>
+	<div><img src="img/30601542_2106453266264664_6916381103141945344_n.jpg"></div>
+	<div><img src="img/30592431_168842037167999_7715118477576503296_n.jpg"></div>
+</div>
+<section class="section9">
+	<div class="container">
+		<div class="sec9_item col-md-4 col-sm-12 col-xs-12">
+			<h3>Dont be shy, say HI!</h3>
+			<h4><i class="fas fa-phone"></i>1-677-124-44227, 1-787-124-445207</h4>
+			<h4><i class="fas fa-clock"></i>	
+Mon - Sat 8.00 - 18.00 Sunday CLOSED</h4>
+			<h4><i class="fas fa-thumbtack"></i>184 Main Collins Street West Victoria 8007</h4>
+			<img src="img/footer-img-1.png" class="sec9_left_img">
+		</div>
+		<div class="sec9_item col-md-4 col-sm-12 col-xs-12">
+			<h3>Opening Hours</h3>
+			<div class="sec9_box_in"><h4>Monday</h4><div></div><h4>8: 00 – 18: 00</h4></div>
+			<div class="sec9_box_in"><h4>Tuesday</h4><div></div><h4>8: 00 – 18: 00</h4></div>
+			<div class="sec9_box_in"><h4>Wednesday</h4><div></div><h4>8: 00 – 18: 00</h4></div>
+			<div class="sec9_box_in"><h4>Thursday</h4><div></div><h4>8: 00 – 18: 00</h4></div>
+			<div class="sec9_box_in"><h4>Friday</h4><div></div><h4>8: 00 – 18: 00</h4></div>
+			<div class="sec9_box_in"><h4>Saturday</h4><div></div><h4>8: 00 – 18: 00</h4></div>
+			<div class="sec9_box_in"><h4>Sunday</h4><div></div><h4>CLOSED</h4></div>
+		</div>
+		<div class="sec9_item col-md-4 col-sm-12 col-xs-12">
+		<h3>Instagram</h3>
+		<div class="sec9_right">
+		<div>
+			<img src="img/31036126_1010247202475565_848967068500885504_n.jpg">
+			<img src="img/30603556_1931313450220221_3735080358635372544_n.jpg">
+			<img src="img/30899894_170652630429452_581651615417630720_n.jpg">
+			</div>
+		<div>
+			<img src="img/30846821_166548997392147_8256991806705631232_n.jpg">
+		
+			<img src="img/31198489_230152800897454_1885019485031628800_n.jpg">
+			<img src="img/30592431_168842037167999_7715118477576503296_n.jpg">
+			</div>
+		</div>
+		</div>
+	</div>
+</section>
+ <div class="section10">
+ 	<div class="container sec10_box">
+ 		<div class="col-md-4 col-sm-12 col-xs-12 sec10_text" >
+ 			<h3>Copyright © Elated Themes 2018.</h3>
+ 		</div>
+ 		<div class="col-md-4 col-sm-12 col-xs-12 sec10_icon ">
+ 			<div><i class="fab fa-facebook-f"></i></div>
+ 			<div><i class="fab fa-twitter"></i></div>
+ 			<div><i class="fab fa-youtube"></i></div>
+ 			<div><i class="fab fa-instagram"></i></div>
+ 			<div><i class="fab fa-linkedin-in"></i></div>
+ 		</div>
+ 		<div class="col-md-4 col-sm-12 col-xs-12 sec10_text">
+ 			<h3>All Rights Reserved</h3>
+ 		</div>
+ 	</div>
+</div>
+</body>
+</html>
